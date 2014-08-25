@@ -1,4 +1,7 @@
 #!/bin/bash
+#ce script doit être mis dans /home/votrenom/ le reste est pris en charge par le script
+#vous pouvez adapter ce script à un autre github facilement
+#L'intérêt de ce script est de mettre à jour la config utilisateur(les dossiers dans /home/) de plusieurs machines si elles ont accès au réseau
 #etape 1 : verif si besoin de mise à jour
 cd ~/.majConfUser;
 versActuelle=$(cat version.txt);
