@@ -14,7 +14,9 @@ if [ $versActuelle -lt $versProchaine ] ; then
   cd majConfUser;
   applications=" ";
   for fic in *.info ; do
-    applications="$applications $(head -2 $fic | tail -1)";
+    if [ $(head -1 $fic) -ge $nbCurrentMaj ];then
+      applications="$applications $(head -2 $fic | tail -1)";
+    fi
   done
   if zenity --question --text="Des mises à jour de configuration sont disponibles pour $applications. Voulez-vous mettre à jour? Si oui, avant merci de fermer les applications concernées si possible."; then
     echo "Début des mises à jour";
