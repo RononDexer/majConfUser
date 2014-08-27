@@ -14,7 +14,7 @@ if [ $versActuelle -lt $versProchaine ] ; then
   cd majConfUser;
   applications=" ";
   for fic in *.info ; do
-    if [ $(head -1 $fic) -ge $nbCurrentMaj ];then
+    if [ $(head -1 $fic) -gt $versActuelle ];then
       applications="$applications $(head -2 $fic | tail -1)";
     fi
   done
