@@ -22,7 +22,8 @@ if [ $versActuelle -lt $versProchaine ] ; then
     echo "Début des mises à jour";
     #calcul nombre maj a faire 
     (
-    nbMaj=$(ls *.tar.gz | wc -l);
+    #nbMaj=$(ls *.tar.gz | wc -l);
+    nbMaj=$(($versProchaine-$versActuelle));
     cpteur=0;
     currentMaj=" ";
     nbCurrentMaj=$(($versActuelle+1));
