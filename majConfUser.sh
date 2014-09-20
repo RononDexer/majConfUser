@@ -35,7 +35,7 @@ if [ $versActuelle -lt $versProchaine ] ; then
         done
         oIFS=$IFS;
         IFS=".";
-        set $fic;
+        set $currentMaj;
         nameFic=$1;
         IFS=$oIFS;
         echo untar $nameFic;
